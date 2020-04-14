@@ -1,0 +1,9 @@
+{
+  "name": "react-sparklines-typescript",
+  "version": "1.0.0",
+  "description": "react-sparklines rewritten in typescript and modern react patterns",
+  "main": "index.js",
+  "repository": "git@github.com:acodesmith/react-sparklines-typescript.git",
+  "author": "acodesmith <adam@acodesmith.com>",
+  "license": "MIT"
+}
