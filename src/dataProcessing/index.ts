@@ -1,0 +1,16 @@
+// export min from "./min";
+// export max from "./min";
+// export mean from "./mean";
+// export avg from "./mean";
+// export midRange from "./midRange";
+// export median from "./median";
+// export stdev from "./stdev";
+// export variance from "./variance";
+export * from "./min";
+export * from "./min";
+export * from "./mean";
+export * from "./mean";
+export * from "./midRange";
+export * from "./median";
+export * from "./stdev";
+export * from "./variance";
