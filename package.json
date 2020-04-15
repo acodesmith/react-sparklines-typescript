@@ -1,12 +1,15 @@
 {
   "name": "react-sparklines-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react-sparklines rewritten in typescript and modern react patterns",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "directories": {
     "src": "src/"
   },
+  "files": [
+    "build"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/acodesmith/react-sparklines-typescript.git"
