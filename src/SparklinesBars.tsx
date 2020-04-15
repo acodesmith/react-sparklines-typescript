@@ -1,24 +1,24 @@
 import React, { FC, CSSProperties } from "react";
 
 interface SparklinesBarsProps {
-  points: any[];
-  height: number;
-  style: CSSProperties;
-  barWidth: number;
-  margin: number;
-  onMouseMove: () => void;
+  points?: any[];
+  height?: number;
+  style?: CSSProperties;
+  barWidth?: number;
+  margin?: number;
+  onMouseMove?: () => void;
 }
 
-const SparklinesBars: FC = (props: SparklinesBarsProps) => {
+const SparklinesBars: FC<SparklinesBarsProps> = (props: SparklinesBarsProps) => {
   const {
-    points,
-    height,
+    points = [],
+    height = 0,
     style = { fill: "slategray" },
     barWidth,
     margin,
     onMouseMove,
   } = props;
-  const strokeWidth: number = 1 * ((style && style.strokeWidth) || 0);
+  const strokeWidth: number = 1 * ((style && style.strokeWidth ? +style.strokeWidth : 0) || 0);
   const marginWidth = margin ? 2 * margin : 0;
   const width =
     barWidth ||
@@ -36,7 +36,7 @@ const SparklinesBars: FC = (props: SparklinesBarsProps) => {
           width={width}
           height={Math.max(0, height - p.y)}
           style={style}
-          onMouseMove={onMouseMove && onMouseMove.bind(this, p)}
+          onMouseMove={onMouseMove && onMouseMove.bind({}, p)}
         />
       ))}
     </g>

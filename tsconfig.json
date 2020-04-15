@@ -9,7 +9,8 @@
     "declaration": true,
     "outDir": "./build",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "sourceMap": true
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "build", "webpack.config.js", "src/dataProcessing"]
 }

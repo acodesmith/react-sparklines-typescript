@@ -4,13 +4,13 @@ import stdev from "./dataProcessing/stdev";
 import { Point } from "./types";
 
 interface SparklinesNormalBandProps {
-  margin: number;
-  points: Point[];
-  style: CSSProperties;
+  margin?: number;
+  points?: Point[];
+  style?: CSSProperties;
 }
 
-const SparklinesNormalBand: FC = (props: SparklinesNormalBandProps) => {
-  const { points, margin, style = { fill: "red", fillOpacity: 0.1 } } = props;
+const SparklinesNormalBand: FC<SparklinesNormalBandProps> = (props: SparklinesNormalBandProps) => {
+  const { points = [], margin = 0, style = { fill: "red", fillOpacity: 0.1 } } = props;
 
   const ypoints = points.map((p) => p.y);
   const dataMean = mean(ypoints);
@@ -21,7 +21,7 @@ const SparklinesNormalBand: FC = (props: SparklinesNormalBandProps) => {
       x={points[0].x}
       y={dataMean - dataStdev + margin}
       width={points[points.length - 1].x - points[0].x}
-      height={stdev * 2}
+      height={2 * +stdev}
       style={style}
     />
   );

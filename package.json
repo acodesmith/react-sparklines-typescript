@@ -1,6 +1,6 @@
 {
   "name": "react-sparklines-typescript",
-  "version": "1.0.2",
+  "version": "1.2.0",
   "description": "react-sparklines rewritten in typescript and modern react patterns",
   "main": "build/index.js",
   "types": "build/index.d.ts",

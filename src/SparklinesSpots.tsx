@@ -2,12 +2,12 @@ import React, { FC, CSSProperties } from "react";
 import { Point } from "./types";
 
 export interface SparklinesSpotsProps {
-  points: Point[];
-  width: number;
-  height: number;
-  size: number;
-  style: CSSProperties;
-  spotColors: string[];
+  points?: Point[];
+  width?: number;
+  height?: number;
+  size?: number;
+  style?: CSSProperties;
+  spotColors?: string[];
 }
 
 const lastDirection = (points: Point[]) => {
@@ -22,8 +22,8 @@ const lastDirection = (points: Point[]) => {
     : Math.sign(points[points.length - 2].y - points[points.length - 1].y);
 };
 
-const SparklinesSpots: FC = (props: SparklinesSpotsProps) => {
-  const { points, size, style, spotColors } = props;
+const SparklinesSpots: FC<SparklinesSpotsProps> = (props: SparklinesSpotsProps) => {
+  const { points = [], size, style, spotColors = [] } = props;
 
   const startSpot = (
     <circle cx={points[0].x} cy={points[0].y} r={size} style={style} />

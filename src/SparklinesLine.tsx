@@ -2,22 +2,22 @@ import React, { FC, CSSProperties } from "react";
 import { Point } from "./types";
 
 export interface SparklinesLineProps {
-  color: string;
-  data: number[];
-  height: number;
-  margin: number;
-  onMouseMove: (e: string, n: number, p: Point) => void;
-  points: Point[];
-  style: CSSProperties;
-  width: number;
+  color?: string;
+  data?: number[];
+  height?: number;
+  margin?: number;
+  onMouseMove?: (e: string, n: number, p: Point) => void;
+  points?: Point[];
+  style?: CSSProperties;
+  width?: number;
 }
 
-const SparklinesLine: FC = (props: SparklinesLineProps) => {
+const SparklinesLine: FC<SparklinesLineProps> = (props: SparklinesLineProps) => {
   const {
-    data,
-    points,
-    height,
-    margin,
+    data = [],
+    points = [],
+    height = 0,
+    margin = 0,
     color,
     style = {},
     onMouseMove = () => {},
@@ -38,17 +38,17 @@ const SparklinesLine: FC = (props: SparklinesLineProps) => {
 
   const fillPoints = linePoints.concat(closePolyPoints);
 
-  const lineStyle = {
+  const lineStyle: CSSProperties = {
     stroke: color || style.stroke || "slategray",
     strokeWidth: style.strokeWidth || "1",
     strokeLinejoin: style.strokeLinejoin || "round",
     strokeLinecap: style.strokeLinecap || "round",
     fill: "none",
   };
-  const fillStyle = {
+  const fillStyle: CSSProperties = {
     stroke: style.stroke || "none",
     strokeWidth: "0",
-    fillOpacity: style.fillOpacity || ".1",
+    fillOpacity: style.fillOpacity || 0.1,
     fill: style.fill || color || "slategray",
     pointerEvents: "auto",
   };

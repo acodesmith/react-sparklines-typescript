@@ -12,17 +12,17 @@ export enum SparklinesReferenceLineTypes {
 }
 
 export interface SparklinesReferenceLineProps {
-  margin: number;
-  points: Point[];
-  type: SparklinesReferenceLineTypes;
-  value: number;
-  style: CSSProperties;
+  margin?: number;
+  points?: Point[];
+  type?: SparklinesReferenceLineTypes;
+  value?: number;
+  style?: CSSProperties;
 }
 
-const SparklinesReferenceLine: FC = (props: SparklinesReferenceLineProps) => {
+const SparklinesReferenceLine: FC<SparklinesReferenceLineProps> = (props: SparklinesReferenceLineProps) => {
   const {
-    points,
-    margin,
+    points = [],
+    margin = 0,
     type = SparklinesReferenceLineTypes.mean,
     style = { stroke: "red", strokeOpacity: 0.75, strokeDasharray: "2, 2" },
     value,
@@ -37,9 +37,9 @@ const SparklinesReferenceLine: FC = (props: SparklinesReferenceLineProps) => {
   return (
     <line
       x1={points[0].x}
-      y1={y + margin}
+      y1={(y ? y : 0) + margin}
       x2={points[points.length - 1].x}
-      y2={y + margin}
+      y2={(y ? y : 0) + margin}
       style={style}
     />
   );

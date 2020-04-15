@@ -2,17 +2,17 @@ import React, { FC, CSSProperties } from "react";
 import { Point } from "./types";
 
 export interface SparklinesCurveProps {
-  color: string;
-  divisor: number;
-  height: number;
-  margin: number;
-  points: any;
-  style: CSSProperties;
-  width: number;
+  color?: string;
+  divisor?: number;
+  height?: number;
+  margin?: number;
+  points?: any;
+  style?: CSSProperties;
+  width?: number;
 }
 
-const SparklinesCurve: FC = (props: SparklinesCurveProps) => {
-  const { points, height, margin, color, style = {}, divisor = 0.25 } = props;
+const SparklinesCurve: FC<SparklinesCurveProps> = (props: SparklinesCurveProps) => {
+  const { points = [], height = 0, margin = 0, color, style = {}, divisor = 0.25 } = props;
 
   let prev: Point;
   const curve = (p: Point) => {
@@ -53,17 +53,17 @@ const SparklinesCurve: FC = (props: SparklinesCurveProps) => {
   ];
   const fillPoints = linePoints.concat(closePolyPoints);
 
-  const lineStyle = {
+  const lineStyle: CSSProperties = {
     stroke: color || style.stroke || "slategray",
     strokeWidth: style.strokeWidth || "1",
     strokeLinejoin: style.strokeLinejoin || "round",
     strokeLinecap: style.strokeLinecap || "round",
     fill: "none",
   };
-  const fillStyle = {
+  const fillStyle: CSSProperties = {
     stroke: style.stroke || "none",
     strokeWidth: "0",
-    fillOpacity: style.fillOpacity || ".1",
+    fillOpacity: style.fillOpacity || 0.1,
     fill: style.fill || color || "slategray",
   };
 
