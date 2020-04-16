@@ -12,7 +12,9 @@ export interface SparklinesLineProps {
   width?: number;
 }
 
-const SparklinesLine: FC<SparklinesLineProps> = (props: SparklinesLineProps) => {
+const SparklinesLine: FC<SparklinesLineProps> = (
+  props: SparklinesLineProps
+) => {
   const {
     data = [],
     points = [],

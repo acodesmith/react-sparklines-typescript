@@ -17,8 +17,11 @@
   "author": "acodesmith <adam@acodesmith.com>",
   "license": "MIT",
   "scripts": {
+    "prebuild": "yarn prettier --write ./src",
+    "pretest": "yarn prettier --write ./src",
     "build": "webpack --mode=production",
-    "start": "webpack --watch"
+    "start": "webpack --watch",
+    "test": "jest"
   },
   "keywords": [
     "react",
@@ -39,10 +42,15 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.2",
     "@types/react": "^16.9.34",
+    "babel-jest": "^25.3.0",
     "babel-loader": "^8.1.0",
+    "jest": "^25.3.0",
     "prettier": "2.0.4",
     "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },

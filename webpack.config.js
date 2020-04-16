@@ -11,7 +11,7 @@ module.exports = {
     filename: "[name].js",
     library: "ReactSparklinesTypescript",
     libraryTarget: "umd",
-    umdNamedDefine: true
+    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -23,11 +23,11 @@ module.exports = {
     ],
   },
   plugins: [
-      new webpack.optimize.UglifyJsPlugin({
-          minimize: true,
-          sourceMap: true,
-          include: /\.min\.js$/,
-      })
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      sourceMap: true,
+      include: /\.min\.js$/,
+    }),
   ],
   externals: {
     react: {

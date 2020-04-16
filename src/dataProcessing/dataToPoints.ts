@@ -4,9 +4,9 @@ import arrayMax from "./max";
 export interface DataToPointsArgs {
   data: number[];
   limit?: number;
-  width: number;
-  height: number;
-  margin: number;
+  width?: number;
+  height?: number;
+  margin?: number;
   max?: number;
   min?: number;
 }

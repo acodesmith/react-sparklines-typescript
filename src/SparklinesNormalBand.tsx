@@ -9,8 +9,14 @@ interface SparklinesNormalBandProps {
   style?: CSSProperties;
 }
 
-const SparklinesNormalBand: FC<SparklinesNormalBandProps> = (props: SparklinesNormalBandProps) => {
-  const { points = [], margin = 0, style = { fill: "red", fillOpacity: 0.1 } } = props;
+const SparklinesNormalBand: FC<SparklinesNormalBandProps> = (
+  props: SparklinesNormalBandProps
+) => {
+  const {
+    points = [],
+    margin = 0,
+    style = { fill: "red", fillOpacity: 0.1 },
+  } = props;
 
   const ypoints = points.map((p) => p.y);
   const dataMean = mean(ypoints);

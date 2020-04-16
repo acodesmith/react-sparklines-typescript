@@ -22,7 +22,9 @@ const lastDirection = (points: Point[]) => {
     : Math.sign(points[points.length - 2].y - points[points.length - 1].y);
 };
 
-const SparklinesSpots: FC<SparklinesSpotsProps> = (props: SparklinesSpotsProps) => {
+const SparklinesSpots: FC<SparklinesSpotsProps> = (
+  props: SparklinesSpotsProps
+) => {
   const { points = [], size, style, spotColors = [] } = props;
 
   const startSpot = (

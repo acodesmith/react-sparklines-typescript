@@ -19,7 +19,9 @@ export interface SparklinesReferenceLineProps {
   style?: CSSProperties;
 }
 
-const SparklinesReferenceLine: FC<SparklinesReferenceLineProps> = (props: SparklinesReferenceLineProps) => {
+const SparklinesReferenceLine: FC<SparklinesReferenceLineProps> = (
+  props: SparklinesReferenceLineProps
+) => {
   const {
     points = [],
     margin = 0,
