@@ -8,8 +8,15 @@ export interface SparklinesTextProps {
   fontFamily?: string;
 }
 
-const SparklinesText: FC<SparklinesTextProps> = (props: SparklinesTextProps) => {
-  const { point = { x: undefined, y: undefined }, text, fontSize, fontFamily } = props;
+const SparklinesText: FC<SparklinesTextProps> = (
+  props: SparklinesTextProps
+) => {
+  const {
+    point = { x: undefined, y: undefined },
+    text,
+    fontSize,
+    fontFamily,
+  } = props;
   const { x, y } = point;
   return (
     <g>

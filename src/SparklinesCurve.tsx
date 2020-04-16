@@ -11,8 +11,17 @@ export interface SparklinesCurveProps {
   width?: number;
 }
 
-const SparklinesCurve: FC<SparklinesCurveProps> = (props: SparklinesCurveProps) => {
-  const { points = [], height = 0, margin = 0, color, style = {}, divisor = 0.25 } = props;
+const SparklinesCurve: FC<SparklinesCurveProps> = (
+  props: SparklinesCurveProps
+) => {
+  const {
+    points = [],
+    height = 0,
+    margin = 0,
+    color,
+    style = {},
+    divisor = 0.25,
+  } = props;
 
   let prev: Point;
   const curve = (p: Point) => {

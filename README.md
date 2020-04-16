@@ -1,4 +1,4 @@
-> :heavy_exclamation_mark: **Original Repo**: https://github.com/borisyankov/react-sparklines  - The original react-sparklines has not been updated for 3 years. This is a rewrite of the original library into Typescript and modern react classless components. The package smaller and faster.
+> :heavy_exclamation_mark: **Original Repo**: https://github.com/borisyankov/react-sparklines - The original react-sparklines has not been updated for 3 years. This is a rewrite of the original library into Typescript and modern react classless components. The package smaller and faster.
 
 # Beautiful and expressive sparklines component for React
 
@@ -22,7 +22,6 @@ npm start
 http://localhost:8080
 ```
 
-
 ## Use
 
 Import the Sparklines components that you need; for example to generate a simple chart:
@@ -43,16 +42,15 @@ data - the data set used to build the sparkline
 
 limit - optional, how many data points to display at once
 
-width, height - dimensions of the generated sparkline in the SVG viewbox.  This will be automatically scaled (i.e. responsive) inside the parent container by default.
+width, height - dimensions of the generated sparkline in the SVG viewbox. This will be automatically scaled (i.e. responsive) inside the parent container by default.
 
 svgWidth, svgHeight - If you want absolute dimensions instead of a responsive component set these attributes.
 
-[preserveAspectRatio](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) - default: 'none', set this to modify how the sparkline should scale 
+[preserveAspectRatio](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) - default: 'none', set this to modify how the sparkline should scale
 
 margin - optional, offset the chart
 
 min, max - optional, bound the chart
-
 
 #### Basic Sparkline
 
@@ -71,7 +69,6 @@ import { Sparklines, SparklinesLine } from 'react-sparklines';
 
 ![](http://borisyankov.github.io/react-sparklines/img/bars.png)
 
-
 ```
 import React from 'react';
 import { Sparklines, SparklinesBars } from 'react-sparklines';
@@ -84,7 +81,6 @@ import { Sparklines, SparklinesBars } from 'react-sparklines';
 #### Spots
 
 ![](http://borisyankov.github.io/react-sparklines/img/spots.png)
-
 
 ```
 import React from 'react';
@@ -100,7 +96,6 @@ import { Sparklines, SparklinesLine, SparklinesSpots } from 'react-sparklines';
 
 ![](http://borisyankov.github.io/react-sparklines/img/referenceline.png)
 
-
 ```
 import React from 'react';
 import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
@@ -114,7 +109,6 @@ import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-spark
 #### Normal Band
 
 ![](http://borisyankov.github.io/react-sparklines/img/normalband.png)
-
 
 ```
 import React from 'react';

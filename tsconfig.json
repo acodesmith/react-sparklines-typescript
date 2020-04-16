@@ -12,5 +12,12 @@
     "esModuleInterop": true,
     "sourceMap": true
   },
-  "exclude": ["node_modules", "build", "webpack.config.js", "src/dataProcessing"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "webpack.config.js",
+    "src/dataProcessing",
+    "src/tests/**",
+    "coverage"
+  ]
 }

@@ -9,7 +9,9 @@ interface SparklinesBarsProps {
   onMouseMove?: () => void;
 }
 
-const SparklinesBars: FC<SparklinesBarsProps> = (props: SparklinesBarsProps) => {
+const SparklinesBars: FC<SparklinesBarsProps> = (
+  props: SparklinesBarsProps
+) => {
   const {
     points = [],
     height = 0,
@@ -18,7 +20,8 @@ const SparklinesBars: FC<SparklinesBarsProps> = (props: SparklinesBarsProps) => 
     margin,
     onMouseMove,
   } = props;
-  const strokeWidth: number = 1 * ((style && style.strokeWidth ? +style.strokeWidth : 0) || 0);
+  const strokeWidth: number =
+    1 * ((style && style.strokeWidth ? +style.strokeWidth : 0) || 0);
   const marginWidth = margin ? 2 * margin : 0;
   const width =
     barWidth ||

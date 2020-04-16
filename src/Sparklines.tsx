@@ -6,7 +6,7 @@ import SparklinesReferenceLine from "./SparklinesReferenceLine";
 import SparklinesLine from "./SparklinesLine";
 import SparklinesSpots from "./SparklinesSpots";
 import SparklinesText from "./SparklinesText";
-
+import SparklinesCurve from "./SparklinesCurve";
 
 export interface SparklinesProps {
   children?: ReactNode | undefined;
@@ -84,4 +84,5 @@ export {
   SparklinesReferenceLine,
   SparklinesSpots,
   SparklinesText,
+  SparklinesCurve,
 };
