@@ -11,13 +11,6 @@ Live demos and docs: [borisyankov.github.io/react-sparklines/](http://borisyanko
 npm install react-sparklines --save
 ```
 
-## Run demo
-
-```
-npm install
-npm start
-http://localhost:8080
-```
 
 ## Use
 
