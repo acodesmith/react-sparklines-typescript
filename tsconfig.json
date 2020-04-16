@@ -16,6 +16,8 @@
     "node_modules",
     "build",
     "webpack.config.js",
-    "src/dataProcessing"
+    "src/dataProcessing",
+    "src/tests/**",
+    "coverage"
   ]
 }
