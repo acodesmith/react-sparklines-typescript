@@ -1,4 +1,4 @@
-> :heavy_exclamation_mark: **Original Repo**: https://github.com/borisyankov/react-sparklines - The original react-sparklines has not been updated for 3 years. This is a rewrite of the original library into Typescript and modern react classless components. The package smaller and faster.
+> :heavy_exclamation_mark: **Original Repo**: https://github.com/borisyankov/react-sparklines - The original react-sparklines has not been updated for 3 years. This is a rewrite of the original library into Typescript and modern react classless components. The package is smaller and faster.
 
 # Beautiful and expressive sparklines component for React
 Live demos and docs: [borisyankov.github.io/react-sparklines/](http://borisyankov.github.io/react-sparklines/)
